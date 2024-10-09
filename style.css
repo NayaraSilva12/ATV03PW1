@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+}
+
+body { 
+    padding: 0;
+    margin: 0;
+    color: rgb(246, 246, 252);
+    background-color: rgb(80, 81, 83);
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(10, 10, 10);
+    height: 40px;
+    position: relative; 
+    z-index: 10px;
+}
+
+.cabecalho img {
+    position: absolute;
+    left: 10px;
+    height: 6%;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none; 
+    align-items: center;
+    padding: 16px;
+    margin: 0; 
+}
+
+p {
+    margin: 5%;
+}
+
+h1 {
+    margin: 2% 5%;
+    text-align: center;
+    text-shadow: 1px 1px 6px rgb(245, 226, 220);
+}
+
+.container { 
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 90px;
+    text-shadow: 1px 1px 9px rgb(245, 226, 220);
+}
+
+.title-apple {
+    text-shadow: 1px 1px 8px rgb(245, 226, 220);
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.slogan {
+    text-align: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.item {
+    padding: 10px 100px;
+    border-radius: 5px;
+    background-color: rgb(111, 112, 114);
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.658); 
+    margin-bottom: 10px;
+    transition: 1s;
+    cursor: default;
+}
+
+.item:hover {
+    background-color: rgb(80, 81, 83);
+    color: rgb(245, 226, 220);
+}
+
+.conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+    max-width: 1200px;
+    margin-top: 20px;
+    margin-left: 70px;
+}
+
+.imagem-celular {
+    width: 450px;
+    max-height: 600px;
+}
+
+.imagem-celular-dois {   
+    max-width: 680px;
+    height: auto;
+}
+
+.carrossel {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.fotos {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+img {
+    width: 100%;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#foto1:checked ~ .fotos {
+    transform: translateX(0%);
+}
+
+#foto2:checked ~ .fotos {
+    transform: translateX(-100%);
+}
+
+#foto3:checked ~ .fotos {
+    transform: translateX(-200%);
+}
+
+#foto4:checked ~ .fotos {
+    transform: translateX(-300%);
+}
+
+#foto5:checked ~ .fotos {
+    transform: translateX(-400%);
+}
+
+.navegacao {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.botao {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.indicadores {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.bolinha {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#foto1:checked ~ .indicadores .bolinha:nth-child(1),
+#foto2:checked ~ .indicadores .bolinha:nth-child(2),
+#foto3:checked ~ .indicadores .bolinha:nth-child(3),
+#foto4:checked ~ .indicadores .bolinha:nth-child(4),
+#foto5:checked ~ .indicadores .bolinha:nth-child(5) {
+    background-color: #ebe1e1;
+}
+
+.rodape {
+    background-color: #979393; 
+    color: #0c0c0c; 
+    text-align: center; 
+    padding: -50px; 
+    position: relative; 
+    bottom: 0; 
+    width: 100%; 
+}
+
+.rodape ul {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+.rodape ul li {
+    display: inline; 
+    margin: 0 10px; 
+}
+
+.rodape ul li a {
+    color: #1f1a1a; 
+    text-decoration: none; 
+}
+
+.rodape ul li a:hover {
+    text-decoration: underline; 
+}
